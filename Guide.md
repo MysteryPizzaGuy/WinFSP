@@ -40,7 +40,7 @@ If you want to go hard mode, just dive in there and figure it out, otherwise I'l
 memset(DirInfo, 0, sizeof *DirInfo);
                 Length = (ULONG)wcslen(FindData.cFileName);
                 DirInfo->Size = (UINT16)(FIELD_OFFSET(FSP_FSCTL_DIR_INFO, FileNameBuf) + Length * sizeof(WCHAR)); // This measures the size of FileNameBuf, if you're having trouble remember that you have to use wide-type characters here so a string literal would be written as L"texthere"
-                DirInfo->FileInfo.FileAttributes = FindData.dwFileAttributes; //File attributes, don't worry about this
+                DirInfo->FileInfo.FileAttributes = FindData.dwFileAttributes; //File attributes, this determines whether it's a file, directory, what type of file it is ect. look here for help https://msdn.microsoft.com/en-us/library/windows/desktop/gg258117(v=vs.85).aspx
                 DirInfo->FileInfo.ReparseTag = 0;
                 DirInfo->FileInfo.FileSize =
                     ((UINT64)FindData.nFileSizeHigh << 32) | (UINT64)FindData.nFileSizeLow;
