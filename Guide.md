@@ -5,7 +5,9 @@
 You probably don't need this
 
 **WinFSP Tutorial:** https://github.com/billziss-gh/winfsp/wiki/WinFsp-Tutorial
+
 **WinFSP API:** http://www.secfs.net/winfsp/apiref/
+
 **WIN DAAS Reference:** https://msdn.microsoft.com/en-us/library/windows/desktop/ee663264(v=vs.85).aspx
 
 ------------
@@ -31,7 +33,7 @@ If you want to go hard mode, just dive in there and figure it out, otherwise I'l
  
 > There's a while loop soon after the ```  FindHandle = FindFirstFileW(FullPath, &FindData); ``` chunk of code, inside that loop is where you want to do your editing, for this loop iterates over files and pushes them into a buffer that cool stuff happens with later</details>
 <details>
- <summary>Hint 3:
+<summary>Hint 3:
 </summary>
  
 ```c
